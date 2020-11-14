@@ -24,15 +24,22 @@ pip install -r requirements.txt
 python3 digital_recipes_qr_generator.py
 ```
 - This generates the QR codes for digital recipes in the digital_recipes_qr_code/ folder. 
-- Go to digital_recipes_qr_code/, select any png file, open the camera app in your phone, and hover over the QR code. 
-For example, hover over these two version of general tso chicken recipes:
+- Go to digital_recipes_qr_code/, select any png file, open the camera app in your phone, and hover over the QR codes. 
+- As an example, hover over these two version of general tso chicken qr codes recipes:
 ![alt text](digital_recipes_qr_code/general_tso_chicken_qr_code_inverted.png)
 ![alt text](digital_recipes_qr_code/general_tso_chicken_qr_code.png)
 
-2. To create the QR codes attached to physical copy.
+2. To attache QR codes to a physical recipe card,
+- Add tips_and_tricks_name:tips_and_tricks_hyperlink to tips_and_tricks_links.py
+- Then run:
 ```
 python3 physical_recipes_qr_generator.py
 ```
+- This generates the QR codes for physical recipes in the physical_recipes_qr_code/folder.
+- Go to physical_recipes_qr_code/, select any file with _qr_code, and hover over the QR code in the right-bottom corner.
+- As an example, hover over the right-bottom QR code of the cheesy chipotle beef recipe below, and the link should take you to 'How To: Chop Scallions' Youtube link:
+![alt text](physical_recipes_qr_code/cheesy_chipotle_beef_qr_code.jpg)
+
 
 ### Resources:
 - https://note.nkmk.me/en/python-pillow-qrcode/

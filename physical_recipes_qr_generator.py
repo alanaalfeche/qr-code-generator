@@ -1,18 +1,18 @@
 from qrcode import QRCode
+from PIL import Image
 
-from recipe_links import RECIPE_LINKS
+from tips_and_tricks_links import TIPS_AND_TRICKS_LINKS
 
+PHYSICAL_RECIPE_QR_CODES_FILE_PATH='physical_recipes_qr_code'
+EXAMPLE_FILE='cheesy_chipotle_beef'
+img_bg = Image.open(f'{PHYSICAL_RECIPE_QR_CODES_FILE_PATH}/{EXAMPLE_FILE}.jpg')
 
-DIGITAL_RECIPE_QR_CODES_FILE_PATH='digital_recipes_qr_code'
+qr = QRCode(box_size=2)
+qr.add_data(TIPS_AND_TRICKS_LINKS['how_to_chop_scallion_link'])
+qr.make(fit=True)
 
-qr = QRCode(
-    version=1, # controls the size of the QR code: 1-40, 1 being the smallest (21x21 matrix)
-    box_size=5, # controls the number of pixels for each QR code "box"
-    border=4, # controls the thickness of the box border
-)
-for name, link in RECIPE_LINKS.items():
-    qr.add_data(link) # accepts hyperlink
-    qr.make(fit=True) # ensures that the entire dimension of the QR code is utilize
-    img = qr.make_image(fill_color='#0f346c', back_color='white')
-    img.save(f'{DIGITAL_RECIPE_QR_CODES_FILE_PATH}/{name}_qr_code.png')
-    qr.clear()
+img = qr.make_image()
+pos = (img_bg.size[0] - img.size[0], img_bg.size[1] - img.size[1]) # right-bottom corner
+
+img_bg.paste(img, pos)
+img_bg.save(f'{PHYSICAL_RECIPE_QR_CODES_FILE_PATH}/{EXAMPLE_FILE}_qr_code.jpg')
