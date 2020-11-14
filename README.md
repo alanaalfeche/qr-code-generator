@@ -26,8 +26,8 @@ python3 digital_recipes_qr_generator.py
 - This generates the QR codes for digital recipes in the digital_recipes_qr_code/ folder. 
 - Go to digital_recipes_qr_code/, select any png file, open the camera app in your phone, and hover over the QR code. 
 For example, hover over these two version of general tso chicken recipes:
-![alt text](digital_recipes_qr_code/general_tso_chicken_qr_code_inverted.png){:height="50%" width="50%"}
-![alt text](digital_recipes_qr_code/general_tso_chicken_qr_code.png){:height="50%" width="50%"}
+![alt text](digital_recipes_qr_code/general_tso_chicken_qr_code_inverted.png)
+![alt text](digital_recipes_qr_code/general_tso_chicken_qr_code.png)
 
 2. To create the QR codes attached to physical copy.
 ```
