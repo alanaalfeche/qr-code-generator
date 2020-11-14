@@ -17,19 +17,21 @@ pip install -r requirements.txt
 ```
 
 ### Running the program
-1. To create the QR codes for blue apron recipes, add recipe_name:recipe_hyperlink to recipes_links.py, then run:
+1. To create the QR codes for blue apron recipes, 
+- Add recipe_name:recipe_hyperlink to recipes_links.py
+- Then run:
 ```
-python digital_recipes_qr_generator.py
+python3 digital_recipes_qr_generator.py
 ```
-- This generates the QR codes for digital recipes in the digital_recipes_qr_code folder. 
+- This generates the QR codes for digital recipes in the digital_recipes_qr_code/ folder. 
 - Go to digital_recipes_qr_code/, select any png file, open the camera app in your phone, and hover over the QR code. 
-For example, hover over this one:
-![alt text](digital_recipes_qr_code/general_tso_chicken_qr_code.png)
-
+For example, hover over these two version of general tso chicken recipes:
+![alt text](digital_recipes_qr_code/general_tso_chicken_qr_code_inverted.png){:height="50%" width="50%"}
+![alt text](digital_recipes_qr_code/general_tso_chicken_qr_code.png){:height="50%" width="50%"}
 
 2. To create the QR codes attached to physical copy.
 ```
-python 
+python3 physical_recipes_qr_generator.py
 ```
 
 ### Resources:

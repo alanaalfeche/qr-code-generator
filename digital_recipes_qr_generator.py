@@ -12,7 +12,7 @@ qr = QRCode(
 )
 for name, link in RECIPE_LINKS.items():
     qr.add_data(link) # accepts hyperlink
-    qr.make(fit=True) # ensures that the entire dimension of the QR code is utilize
-    img = qr.make_image(fill='red', back_color='white')
+    qr.make() # ensures that the entire dimension of the QR code is utilize
+    img = qr.make_image(fill_color='#0f346c', back_color='white')
     img.save(f'{DIGITAL_RECIPE_QR_CODES_FILE_PATH}/{name}_qr_code.png')
     qr.clear()
