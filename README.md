@@ -17,15 +17,21 @@ pip install -r requirements.txt
 ```
 
 ### Running the program
-1. To create the QR codes for blue apron recipes.
+1. To create the QR codes for blue apron recipes, add recipe_name:recipe_hyperlink to recipes_links.py, then run:
 ```
-python qr_generator.py
+python digital_recipes_qr_generator.py
 ```
+- This generates the QR codes for digital recipes in the digital_recipes_qr_code folder. 
+- Go to digital_recipes_qr_code/, select any png file, open the camera app in your phone, and hover over the QR code. 
+For example, hover over this one:
+![alt text](digital_recipes_qr_code/general_tso_chicken_qr_code.png)
+
+
 2. To create the QR codes attached to physical copy.
 ```
 python 
 ```
 
 ### Resources:
-https://note.nkmk.me/en/python-pillow-qrcode/
-https://pypi.org/project/qrcode/
+- https://note.nkmk.me/en/python-pillow-qrcode/
+- https://pypi.org/project/qrcode/
